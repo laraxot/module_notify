@@ -9,24 +9,24 @@
     <meta name="generator" content="Retype 2.4.0">
 
     <!-- Primary Meta Tags -->
-    <title>Custom 404 Page</title>
-    <meta name="title" content="Custom 404 Page">
-    <meta name="description" content="Custom 404 pages with Jigsaw docs starter template" />
+    <title>Namirial Service</title>
+    <meta name="title" content="Namirial Service">
+    <meta name="description" content="Namirial Service" />
 
     <!-- Canonical -->
-    <link rel="canonical" href="/docs/source/docs/custom-404-page/" />
+    <link rel="canonical" href="/docs/source/docs/namirial_service/" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="/docs/source/docs/custom-404-page/">
-    <meta property="og:title" content="Custom 404 Page">
-    <meta property="og:description" content="Custom 404 pages with Jigsaw docs starter template">
+    <meta property="og:url" content="/docs/source/docs/namirial_service/">
+    <meta property="og:title" content="Namirial Service">
+    <meta property="og:description" content="Namirial Service">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="/docs/source/docs/custom-404-page/">
-    <meta property="twitter:title" content="Custom 404 Page">
-    <meta property="twitter:description" content="Custom 404 pages with Jigsaw docs starter template">
+    <meta property="twitter:url" content="/docs/source/docs/namirial_service/">
+    <meta property="twitter:title" content="Namirial Service">
+    <meta property="twitter:description" content="Namirial Service">
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
@@ -35,7 +35,6 @@
     <script type="text/javascript" src="../../../../resources/js/config.js?v=2.4.0.730222614935" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
     <script id="lunr-js" type="text/javascript" src="../../../../resources/js/lunr.js?v=2.4.0.730222614935" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../../../resources/js/prism.js?v=2.4.0.730222614935" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -167,30 +166,26 @@
                                 <div id="docs-sidebar-right-toggle"></div>
                 
                                 <!-- Page content  -->
-<doc-anchor-target id="custom-404-page" class="break-words">
+<doc-anchor-target id="namirial_service" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#custom-404-page">#</doc-anchor-trigger>
-        <span>Custom 404 Page</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#namirial_service">#</doc-anchor-trigger>
+        <span>namirial_service</span>
     </h1>
 </doc-anchor-target>
-<p>This starter template includes a custom <strong>404 Not Found</strong> error page, located at <code v-pre>/source/404.blade.php</code>. <a href="../../../../404.html">To preview the 404 page</a>, you can visit <code v-pre>/404</code> in your browser.</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-markup"><code v-pre class="language-markup">&lt;!-- source/404.blade.php --&gt;
-@extends('_layouts.master')
-
-@section('body')
-&lt;div class=&quot;flex flex-col items-center mt-32 text-gray-700&quot;&gt;
-    &lt;h1 class=&quot;text-6xl leading-none mb-2&quot;&gt;404&lt;/h1&gt;
-    &lt;h2 class=&quot;text-3xl&quot;&gt;Page not found&lt;/h2&gt;
-
-    &lt;hr class=&quot;block w-full max-w-lg mx-auto my-8 border&quot;&gt;
-
-    &lt;p class=&quot;text-xl&quot;&gt;Need to update this page? See the &lt;a title=&quot;404 Page Documentation&quot; href=&quot;/docs/404&quot;&gt; documentation here&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-@endsection</code></pre>
-</doc-codeblock></div>
-<hr />
-<p>Depending on where your site is hosted, you may need to configure your server to use the custom 404 page. For more details, visit the <a href="https://jigsaw.tighten.co/docs/custom-404-page/">Jigsaw documentation about configuring a custom 404 page.</a></p>
+<p>This is a PHP class called NamirialService in the namespace Modules\Notify\Services, that provides methods to interact with the Namirial API. It has the following public methods:</p>
+<p>setRecipientGivenName($name): sets the given name of the recipient of a document to be signed.</p>
+<p>setRecipientEmail($email): sets the email of the recipient of a document to be signed.</p>
+<p>setRecipientPhoneNumber($phone_number): sets the phone number of the recipient of a document to be signed.</p>
+<p>setRecipientSurname($surname): sets the surname of the recipient of a document to be signed.</p>
+<p>systemVersion(): retrieves the system version of the Namirial API.</p>
+<p>fileUpload($file_path): uploads a file to the Namirial API.</p>
+<p>filePrepare(): prepares a file for sending as an envelope to be signed.</p>
+<p>envelopeSend(): sends an envelope to the recipient for signing.</p>
+<p>envelopeFind(?array $custom_params = []): make an HTTP POST request to the &quot;/envelope/find&quot; endpoint to get information about already completed envelopes, using the parameters specified in the optional $custom_params parameter. If $custom_params is not supplied, the default parameters are used. The method returns the calling object (self).</p>
+<p last_envelope_id="">envelopeInformations(): make an HTTP GET request to the &quot;/envelope/&quot; endpoint, where  represents the ID of the last envelope processed by the envelopeFind() method, to get information about that envelope. The method returns the calling object (self).</p>
+<p last_envelope_id="">envelopeFiles(): make a GET type HTTP request to the &quot;/envelope//files&quot; endpoint, where  represents the ID of the last envelope processed by the envelopeFind() method, to get the files associated with the envelope. The method stores the ID of the last file (if any) in the $last_envelope_file_id property of the calling object (self), and returns the latter.</p>
+<p last_envelope_file_id="">downloadDocument(): make a GET-type HTTP request to the &quot;/file/&quot; endpoint, where  represents the ID of the last file associated with the envelope processed by the envelopeFiles() method. The method returns the calling object (self). If the $last_envelope_file_id property has not been set, an exception of type Exception is thrown.</p>
+<p>The class also has private methods for making HTTP requests to the API, as well as private properties for storing the API credentials, the response from the API, and other information related to the last file or envelope sent.</p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -200,20 +195,20 @@
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../../docs/source/docs/algolia-docsearch/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../../docs/source/docs/getting-started/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">Algolia Doc​Search</span>
+                                                <span class="block mt-1">Getting Started</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../../docs/source/docs/module_notify/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../../docs/source/docs/navigation/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">Funzione del Modulo</span>
+                                                <span class="block mt-1">Navigation</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -257,6 +252,6 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script>window.__DOCS__ = { "title": "Custom 404 Page", level: 4, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false }</script>
+    <script>window.__DOCS__ = { "title": "Namirial Service", level: 4, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
 </body>
 </html>
