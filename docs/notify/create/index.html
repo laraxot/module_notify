@@ -145,6 +145,18 @@ Inserire il mittente che verrà visualizzato.<br />
 In caso si stia creando una email, inserire l'indirizzo mittente se diverso da quello di default.<br />
 Inserire il soggetto della notifica.<br />
 Inserire nel campo body il corpo della notifica e ricopiarlo nel campo body_html (utilizzato per le email).</p>
+
+<h2>Il body</h2>
+
+<p>Alcune volte può capitare che la notifica inviata sia personalizzata,<br />
+quindi che abbia al suo interno informazioni che possono variare in base al destinatario,<br />
+come ad esempio il nome.</p>
+
+<p>In questo caso la notifica dovrà utilizzata dovrà avere dei parametri nella sua chiamata.<br />
+Questi parametri dovranno essere utilizzati nel corpo della notifica, esempio:</p>
+
+<pre><code class="language-php">Ciao [profile.first_name] [profile.last_name] come stai?
+</code></pre>
         </div>
     </div>
 </section>
