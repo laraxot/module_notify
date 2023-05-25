@@ -16,7 +16,8 @@ return [
     'Funzione del Modulo' => [
         'url' => 'docs/module_notify',
         'children' => [
-            'Notifica ThemeNotification' => 'docs/theme-notification',
+            'Notifica ThemeNotification' => 'docs/theme-notification-class',
+            'Classe BuildMailMessageAction' => 'docs/build-mail-message-action',
         ],
     ],
     'TrySendMailAction' => [
