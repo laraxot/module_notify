@@ -15,9 +15,9 @@ return [
     // 'Jigsaw Docs' => 'https://jigsaw.tighten.co/docs/installation',
     'Funzione del Modulo' => [
         'url' => 'docs/module_notify',
-        // 'children' => [
-        //     'TrySendMailAction' => 'docs/try_send_mail_action',
-        // ],
+        'children' => [
+            'Notifica ThemeNotification' => 'docs/theme-notification',
+        ],
     ],
     'TrySendMailAction' => [
         'url' => 'docs/try_send_mail_action',
