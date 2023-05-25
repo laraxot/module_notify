@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.738349623341">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.738350704149">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -30,12 +30,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../../resources/css/retype.css?v=2.4.0.738349623341" rel="stylesheet" />
+    <link href="../../../../resources/css/retype.css?v=2.4.0.738350704149" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../../resources/js/config.js?v=2.4.0.738349623341" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../../resources/js/config.js?v=2.4.0.738350704149" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../../resources/js/lunr.js?v=2.4.0.738349623341" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../../../resources/js/prism.js?v=2.4.0.738349623341" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../../resources/js/lunr.js?v=2.4.0.738350704149" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../../../resources/js/prism.js?v=2.4.0.738350704149" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -173,10 +173,20 @@
         <span>Notifica ThemeNotification</span>
     </h1>
 </doc-anchor-target>
-<p>Classe notifica utilizzata per gestire le notifiche (email/sms/ecc).</p>
+<p>Classe che si occupa di recuperare il template della notifica che si vuole utilizzare,<br />
+già precedentemente creata nella tabella notify_themes.<br />
+Esempo:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-php"><code v-pre class="language-php">Notification::send($company-&gt;reporter, new ThemeNotification('accepted_company', $company-&gt;toArray()));</code></pre>
+<pre class="language-php"><code v-pre class="language-php">$template = new ThemeNotification('reported_company', $company-&gt;toArray());</code></pre>
 </doc-codeblock></div>
+<p>In questo caso nella variabile $template verrà inserita la notifica reported_company (primo parametro),<br />
+come secondo parametro verrà passato un array di valori che verranno poi utilizzate nel corpo della notifica.
+Una volta recuperato il template della notifica, si procede all&#x27;invio (tramite codice):</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-php"><code v-pre class="language-php">Notification::send($recipients, $template);</code></pre>
+</doc-codeblock></div>
+<p>Il primo parametro $recipients è una collezione di destinatari a cui verrà mandata la notifica,<br />
+il secondo parametro $template è quello appena recuperato dalla tabella notify_themes</p>
 
                                 
                                 <!-- Required only on API pages -->
