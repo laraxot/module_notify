@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.738348897827">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.738349494506">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -30,11 +30,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../../../resources/css/retype.css?v=2.4.0.738348897827" rel="stylesheet" />
+    <link href="../../../../../resources/css/retype.css?v=2.4.0.738349494506" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../../../resources/js/config.js?v=2.4.0.738348897827" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../../../resources/js/config.js?v=2.4.0.738349494506" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../../../resources/js/lunr.js?v=2.4.0.738348897827" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../../../resources/js/lunr.js?v=2.4.0.738349494506" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../../../../resources/js/prism.js?v=2.4.0.738349494506" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -180,6 +181,20 @@ Inserire il mittente che verrà visualizzato.<br />
 In caso si stia creando una email, inserire l&#x27;indirizzo mittente se diverso da quello di default.<br />
 Inserire il soggetto della notifica.<br />
 Inserire nel campo body il corpo della notifica e ricopiarlo nel campo body_html (utilizzato per le email).</p>
+<doc-anchor-target id="il-body">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#il-body">#</doc-anchor-trigger>
+        <span>Il body</span>
+    </h2>
+</doc-anchor-target>
+<p>Alcune volte può capitare che la notifica inviata sia personalizzata,<br />
+quindi che abbia al suo interno informazioni che possono variare in base al destinatario,<br />
+come ad esempio il nome.</p>
+<p>In questo caso la notifica dovrà utilizzata dovrà avere dei parametri nella sua chiamata.<br />
+Questi parametri dovranno essere utilizzati nel corpo della notifica, esempio:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-php"><code v-pre class="language-php">Ciao [profile.first_name] [profile.last_name] come stai?</code></pre>
+</doc-codeblock></div>
 
                                 
                                 <!-- Required only on API pages -->
@@ -246,6 +261,6 @@ Inserire nel campo body il corpo della notifica e ricopiarlo nel campo body_html
 
     <div id="docs-overlay-target"></div>
 
-    <script>window.__DOCS__ = { "title": "Creare Notifica", level: 5, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
+    <script>window.__DOCS__ = { "title": "Creare Notifica", level: 5, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false }</script>
 </body>
 </html>
