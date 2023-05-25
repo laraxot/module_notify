@@ -9,24 +9,24 @@
     <meta name="generator" content="Retype 2.4.0">
 
     <!-- Primary Meta Tags -->
-    <title>About</title>
-    <meta name="title" content="About">
-    <meta name="description" content="The laraxot/module_notify is a Laravel module that provides easy-to-use notification services." />
+    <title>Creare Notifica</title>
+    <meta name="title" content="Creare Notifica">
+    <meta name="description" content="Creare Notifica" />
 
     <!-- Canonical -->
-    <link rel="canonical" href="/docs/source/en/docs/about/" />
+    <link rel="canonical" href="/docs/source/docs/notify/create/" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="/docs/source/en/docs/about/">
-    <meta property="og:title" content="About">
-    <meta property="og:description" content="The laraxot/module_notify is a Laravel module that provides easy-to-use notification services.">
+    <meta property="og:url" content="/docs/source/docs/notify/create/">
+    <meta property="og:title" content="Creare Notifica">
+    <meta property="og:description" content="Creare Notifica">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="/docs/source/en/docs/about/">
-    <meta property="twitter:title" content="About">
-    <meta property="twitter:description" content="The laraxot/module_notify is a Laravel module that provides easy-to-use notification services.">
+    <meta property="twitter:url" content="/docs/source/docs/notify/create/">
+    <meta property="twitter:title" content="Creare Notifica">
+    <meta property="twitter:description" content="Creare Notifica">
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
@@ -166,42 +166,13 @@
                                 <div id="docs-sidebar-right-toggle"></div>
                 
                                 <!-- Page content  -->
-<doc-anchor-target id="about" class="break-words">
+<doc-anchor-target id="creare-notifica" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#about">#</doc-anchor-trigger>
-        <span>About</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#creare-notifica">#</doc-anchor-trigger>
+        <span>Creare Notifica</span>
     </h1>
 </doc-anchor-target>
-<p>The laraxot/module_notify is a Laravel module that provides easy-to-use notification services. It allows you to send notifications to various channels, such as email, SMS, Slack, and more.</p>
-<p>To use this module in your Laravel project, you first need to install it via composer:</p>
-<p>Copy code
-composer require laraxot/module_notify
-Once installed, you can register the NotifyServiceProvider in your config/app.php file:</p>
-<p>Copy code
-&#x27;providers&#x27; =&gt; [
-...
-Laraxot\Module\Notify\NotifyServiceProvider::class,
-...
-]
-You can then publish the config file and migration files using the vendor:publish Artisan command:</p>
-<p>Copy code
-php artisan vendor:publish --provider=&quot;Laraxot\Module\Notify\NotifyServiceProvider&quot;
-This will create a config/notify.php file where you can configure the various notification channels and their settings, as well as a database/migrations directory containing the migration files for creating the required database tables.</p>
-<p>To create the tables, run the migrate Artisan command:</p>
-<p>Copy code
-php artisan migrate
-Now that the module is installed and configured, you can start sending notifications. To do so, you can use the Notify facade:</p>
-<p>Copy code
-use Laraxot\Module\Notify\Facades\Notify;</p>
-<p>...</p>
-<p>// Send a notification to a specific channel
-Notify::channel(&#x27;email&#x27;)-&gt;send(&#x27;Hello world!&#x27;);</p>
-<p>// Send a notification to multiple channels
-Notify::send(&#x27;Hello world!&#x27;, [&#x27;email&#x27;, &#x27;sms&#x27;]);
-You can also use the notify() helper function:</p>
-<p>Copy code
-notify(&#x27;Hello world!&#x27;, [&#x27;email&#x27;, &#x27;sms&#x27;]);
-For more information, please see the GitHub repository for this module.</p>
+<p>aaaa</p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -211,16 +182,23 @@ For more information, please see the GitHub repository for this module.</p>
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../../../docs/source/docs/try_send_mail_action/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../../../docs/source/docs/links/email/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">Testare configurazione email tramite Try​Send​Mail​Action</span>
+                                                <span class="block mt-1">links email</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../../../docs/source/docs/about/">
+                                            <span>
+                                                <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
+                                                <span class="block mt-1">About Notify</span>
+                                            </span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                                        </a>
                                     </div>
                                 </nav>
                             </footer>
@@ -261,6 +239,6 @@ For more information, please see the GitHub repository for this module.</p>
 
     <div id="docs-overlay-target"></div>
 
-    <script>window.__DOCS__ = { "title": "About", level: 5, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
+    <script>window.__DOCS__ = { "title": "Creare Notifica", level: 5, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
 </body>
 </html>
