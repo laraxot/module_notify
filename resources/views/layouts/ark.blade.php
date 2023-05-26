@@ -32,13 +32,13 @@
                             </tr>
                             <tr class="mobile_only">
                                 <td class="w640" width="640" align="center">
-
-                                    <img class="mobile_only" border="0"
-                                        src="{{ array_key_exists('path', $logo) ? $logo['path'] : '' }}"
-                                        alt="{{ isset($senderName) ? $senderName : '' }}"
-                                        width="{{ array_key_exists('width', $logo) ? $logo['width'] : '' }}"
-                                        height="{{ array_key_exists('height', $logo) ? $logo['height'] : '' }}" />
-
+                                    @if (is_array($logo))
+                                        <img class="mobile_only" border="0"
+                                            src="{{ array_key_exists('path', $logo) ? $logo['path'] : '' }}"
+                                            alt="{{ isset($senderName) ? $senderName : '' }}"
+                                            width="{{ array_key_exists('width', $logo) ? $logo['width'] : '' }}"
+                                            height="{{ array_key_exists('height', $logo) ? $logo['height'] : '' }}" />
+                                    @endif
                                 </td>
                             </tr>
                             <tr class="mobile_only">
@@ -53,19 +53,21 @@
                             <tr>
                                 <td id="header" class="w640" align="center" bgcolor="#FFFFFF" width="640">
                                     <table class="w640" border="0" cellpadding="0" cellspacing="0" width="640">
-                                        <tr>
-                                            <td class="w20" width="20"></td>
-                                            <td id="logo"
-                                                width="{{ array_key_exists('width', $logo) ? $logo['width'] : '' }}"
-                                                valign="top">
-                                                <img border="0"
-                                                    src="{{ array_key_exists('path', $logo) ? $logo['path'] : '' }}"
-                                                    alt="{{ isset($senderName) ? $senderName : '' }}"
+                                        @if (is_array($logo))
+                                            <tr>
+                                                <td class="w20" width="20"></td>
+                                                <td id="logo"
                                                     width="{{ array_key_exists('width', $logo) ? $logo['width'] : '' }}"
-                                                    height="{{ array_key_exists('height', $logo) ? $logo['height'] : '' }}" />
-                                            </td>
-                                            <td class="w30" width="30"></td>
-                                        </tr>
+                                                    valign="top">
+                                                    <img border="0"
+                                                        src="{{ array_key_exists('path', $logo) ? $logo['path'] : '' }}"
+                                                        alt="{{ isset($senderName) ? $senderName : '' }}"
+                                                        width="{{ array_key_exists('width', $logo) ? $logo['width'] : '' }}"
+                                                        height="{{ array_key_exists('height', $logo) ? $logo['height'] : '' }}" />
+                                                </td>
+                                                <td class="w30" width="30"></td>
+                                            </tr>
+                                        @endif
                                         <tr>
                                             <td colspan="3" height="20" class="large_only"></td>
                                         </tr>
