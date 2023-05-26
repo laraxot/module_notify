@@ -17,6 +17,7 @@ return [
         'url' => 'docs/module_notify',
         'children' => [
             'Creare una notifica' => 'docs/notify/create',
+            'Funzione getNotificationData' => 'docs/functions/get-notification-data',
             // 'Classe BuildMailMessageAction' => 'docs/build-mail-message-action',
         ],
     ],
