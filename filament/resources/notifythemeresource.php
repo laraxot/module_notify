@@ -29,6 +29,15 @@ class NotifyThemeResource extends Resource
                 Forms\Components\Select::make('lang')->options(self::fieldOptions('lang')),
                 Forms\Components\Select::make('type')->options(self::fieldOptions('type')),
                 Forms\Components\Select::make('post_type')->options(self::fieldOptions('post_type')),
+                Forms\Components\TextInput::make('post_id'),
+                Forms\Components\TextInput::make('subject'),
+                Forms\Components\TextInput::make('from'),
+                Forms\Components\TextInput::make('from_email'),
+                Forms\Components\TextInput::make('logo_src'),
+                Forms\Components\TextInput::make('logo_width'),
+                Forms\Components\TextInput::make('logo_height'),
+                Forms\Components\TextInput::make('theme'),
+
                 Forms\Components\RichEditor::make('body')->columnSpanFull(),
                 Forms\Components\RichEditor::make('body_html')->columnSpanFull(),
             ]);
@@ -76,7 +85,7 @@ class NotifyThemeResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            //RelationManagers\LinkableRelationManager::class,
         ];
     }
     
