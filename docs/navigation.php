@@ -30,6 +30,11 @@ return [
         ],
     ],
 
-
+    'Record SPF e DKIM' => [
+        'children' => [
+            'Come configurare Duocircle' => 'docs/duocircle/how-config-duocircle',
+            'Link utili' => 'docs/duocircle/links',
+        ],
+    ],
 
 ];
