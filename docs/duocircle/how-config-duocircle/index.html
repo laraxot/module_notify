@@ -5,12 +5,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="description" content="Namirial Service">
+    <meta name="description" content="Come configurare Duocircle">
 
     <meta property="og:site_name" content="Modulo Notify" />
-    <meta property="og:title" content="Namirial Service | Modulo Notify" />
-    <meta property="og:description" content="Namirial Service" />
-    <meta property="og:url" content="https://laraxot.github.io/module_notify/docs/namirial_service" />
+    <meta property="og:title" content="Come configurare Duocircle | Modulo Notify" />
+    <meta property="og:description" content="Come configurare Duocircle" />
+    <meta property="og:url" content="https://laraxot.github.io/module_notify/docs/duocircle/how-config-duocircle" />
     <meta property="og:image" content="https://laraxot.github.io/module_notify/assets/img/logo.png" />
     <meta property="og:type" content="website" />
 
@@ -18,7 +18,7 @@
     <meta name="twitter:card" content="summary_large_image">
 
     
-    <title>Modulo Notify | Namirial Service</title>
+    <title>Modulo Notify | Come configurare Duocircle</title>
 
     <link rel="home" href="https://laraxot.github.io/module_notify/">
     <link rel="icon" href="/favicon.ico">
@@ -148,7 +148,7 @@
             <li class="pl-4">
             
         <a href="https://laraxot.github.io/module_notify/docs/duocircle/how-config-duocircle"
-            class="lvl1   nav-menu__item hover:text-blue-500"
+            class="lvl1  active font-semibold text-blue-500 nav-menu__item hover:text-blue-500"
         >
             Come configurare Duocircle
         </a>
@@ -169,35 +169,16 @@
         </nav>
 
         <div class="DocSearch-content w-full lg:w-3/5 break-words pb-16 lg:pl-4" v-pre>
-            <h1>namirial_service</h1>
+            <h1>Come configurare Duocircle</h1>
 
-<p>This is a PHP class called NamirialService in the namespace Modules\Notify\Services, that provides methods to interact with the Namirial API. It has the following public methods:</p>
+<p>Dopo essersi loggato a Duocircle,<br />
+andare nella lista dei domini,<br />
+aggiungere il nuovo dominio,<br />
+verranno generati 2 record:</p>
 
-<p>setRecipientGivenName($name): sets the given name of the recipient of a document to be signed.</p>
+<p>il record SPF...</p>
 
-<p>setRecipientEmail($email): sets the email of the recipient of a document to be signed.</p>
-
-<p>setRecipientPhoneNumber($phone_number): sets the phone number of the recipient of a document to be signed.</p>
-
-<p>setRecipientSurname($surname): sets the surname of the recipient of a document to be signed.</p>
-
-<p>systemVersion(): retrieves the system version of the Namirial API.</p>
-
-<p>fileUpload($file_path): uploads a file to the Namirial API.</p>
-
-<p>filePrepare(): prepares a file for sending as an envelope to be signed.</p>
-
-<p>envelopeSend(): sends an envelope to the recipient for signing.</p>
-
-<p>envelopeFind(?array $custom_params = []): make an HTTP POST request to the "/envelope/find" endpoint to get information about already completed envelopes, using the parameters specified in the optional $custom_params parameter. If $custom_params is not supplied, the default parameters are used. The method returns the calling object (self).</p>
-
-<p>envelopeInformations(): make an HTTP GET request to the "/envelope/{last_envelope_id}" endpoint, where {last_envelope_id} represents the ID of the last envelope processed by the envelopeFind() method, to get information about that envelope. The method returns the calling object (self).</p>
-
-<p>envelopeFiles(): make a GET type HTTP request to the "/envelope/{last_envelope_id}/files" endpoint, where {last_envelope_id} represents the ID of the last envelope processed by the envelopeFind() method, to get the files associated with the envelope. The method stores the ID of the last file (if any) in the $last_envelope_file_id property of the calling object (self), and returns the latter.</p>
-
-<p>downloadDocument(): make a GET-type HTTP request to the "/file/{last_envelope_file_id}" endpoint, where {last_envelope_file_id} represents the ID of the last file associated with the envelope processed by the envelopeFiles() method. The method returns the calling object (self). If the $last_envelope_file_id property has not been set, an exception of type Exception is thrown.</p>
-
-<p>The class also has private methods for making HTTP requests to the API, as well as private properties for storing the API credentials, the response from the API, and other information related to the last file or envelope sent.</p>
+<p>il record DKIM, che dovrà essere inserito dentro il dns del dominio interessato.</p>
         </div>
     </div>
 </section>
