@@ -36,8 +36,17 @@ class NotifyThemeResource extends Resource
                 Forms\Components\TextInput::make('logo_src'),
                 Forms\Components\TextInput::make('logo_width'),
                 Forms\Components\TextInput::make('logo_height'),
-                Forms\Components\TextInput::make('theme'),
-
+                // Forms\Components\TextInput::make('theme'),
+                Forms\Components\Select::make('theme')->options(
+                    [
+                        'empty' => 'empty',
+                        'ark' => 'ark',
+                        'minty' => 'minty',
+                        'sunny' => 'sunny',
+                        'widgets' => 'widgets',
+                    ]
+                )
+                ->default('empty'),
                 Forms\Components\RichEditor::make('body')->columnSpanFull(),
                 Forms\Components\RichEditor::make('body_html')->columnSpanFull(),
             ]);
