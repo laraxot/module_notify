@@ -4,7 +4,7 @@
     <title>{{ isset($senderName) ? $senderName : '' }}.</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <style type="text/css">
-        {{ $_theme->cssInLine('notify::css/ark.css') }}
+        {{ cssInLine('notify::css/ark.css') }}
     </style>
     @if (isset($css))
         <style type="text/css">
