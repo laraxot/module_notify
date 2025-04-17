@@ -1,0 +1,32 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Modules\Notify\Notifications\Channels;
+
+use Modules\Notify\Notifications\RowAttributeNotification;
+use Modules\Xot\Contracts\ModelContactContract;
+
+class NamirialChannel {
+    public function __construct() {
+    }
+
+    /**
+     * Send the given notification.
+     *
+     * @param mixed $notifiable
+     *
+     * @return void
+     */
+    public function send($notifiable, RowAttributeNotification $notification) {
+        $message = $notification->toSms($notifiable);
+        // Send notification to the $notifiable instance...
+        $data = app(NamirialSendAction::class)->execute($message);
+
+        if ($notifiable instanceof ModelContactContract) {
+            $data['sms_sent_at'] = now();
+            $data['sms_count'] = (int) $notifiable->sms_count + 1;
+            $notifiable->update($data);
+        }
+    }
+}
